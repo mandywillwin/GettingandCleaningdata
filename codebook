@@ -1,0 +1,40 @@
+Course project - Codebook
+
+Step:1
+
+traindata: dataframe created from X_train.txt
+testData: dataframe created from X_test.txt
+testSubject: dataframe created from subject_test.txt
+trainSubject: dataframe created from subject_train.txt
+testLabel: dataframe created from y_test.txt
+trainLabel: dataframe created from y_train.txt
+
+trainSubjectData: dataframe created by combining trainData,trainSubject
+
+trainSubjectActivityData: dataframe created by combining trainSubjectData,trainLabel
+
+testSubjectData: dataframe created by combining testData,testSubject
+
+testSubjectActivityData: dataframe created by combining testSubjectData,testLabel
+combinedTrainTestData: dataframe created by combining trainSubjectActivityData,testSubjectActivityData
+Step:2
+
+featureLabel: dataframe created from features.txt
+meanStdIndices: vector created by inspecing the string for mean() and std()
+Step:3
+
+activityLabel: dataframe created from activity_labels.txt
+combineLabel: dataframe created by combining trainLabel, testLabel
+
+actLabel: dataframe prepared using combineLabel
+
+Step:4
+
+combineLabel: dataframe created by combining trainSubject, testSubject
+cleanedData: dataframe created by combining combineSubject, combineLabel, combinedTrainTestData
+Step:5
+
+subjectLen: Integer vector that stores the size of subjects
+activityLen: Integer vector that stores the size of activities
+columnLen: Integer vector that stores the measurement count
+result: the matrix created with activity*subject with against measurement
